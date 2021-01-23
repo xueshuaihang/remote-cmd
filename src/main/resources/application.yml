@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: remote-cmd
+server:
+  port: 8080
