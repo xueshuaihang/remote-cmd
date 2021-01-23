@@ -1,5 +1,6 @@
 package com.remotecmd.service;
 
+import com.remotecmd.common.Constants;
 import com.remotecmd.condition.WindowsConditionAbstract;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Service;
@@ -25,9 +26,11 @@ public class WindowsRemoteCmd implements RemoteCmd {
         InputStream errorStream = process.getErrorStream();
         String inputStr = getStrForInputStream(inputStream);
         String errorStr = getStrForInputStream(errorStream);
-        return "inputStream:\n"
+        return "inputStream:"
+                + Constants.LINE_SEPARATOR
                 + inputStr
-                + "errorStream:\n"
+                + "errorStream:"
+                + Constants.LINE_SEPARATOR
                 + errorStr;
     }
 

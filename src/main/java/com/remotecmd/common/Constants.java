@@ -14,4 +14,5 @@ public interface Constants {
 
     String OS_MAC = "mac";
 
+    String LINE_SEPARATOR = System.getProperty("line.separator");
 }
